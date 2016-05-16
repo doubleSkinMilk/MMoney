@@ -39,22 +39,20 @@ class MainPageViewController: UIViewController,UIScrollViewDelegate {
         self.vcScrollView.addSubview(payments.view)
         self.vcScrollView.addSubview(income.view)
         self.vcScrollView.addSubview(other.view)
-        
         self.addChildViewController(payments)
         self.addChildViewController(income)
         self.addChildViewController(other)
-        
     }
-    
-     func scrollViewDidScroll(scrollView: UIScrollView) {
+}
 
+
+extension MainPageViewController{
+    func scrollViewDidScroll(scrollView: UIScrollView) {
         topView.titleScroll.contentOffset = CGPoint(x: scrollView.contentOffset.x*((MainScreenWidth-65)/2/MainScreenWidth), y: 0)
     }
     
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
-    
-    
 }
+

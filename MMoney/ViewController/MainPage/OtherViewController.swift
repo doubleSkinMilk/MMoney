@@ -9,10 +9,14 @@
 import UIKit
 
 class OtherViewController: UIViewController {
+    
+    lazy var chartContainer = ChartContainerView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: MainScreenWidth*0.373))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.yellowColor()
+        self.view.addSubview(chartContainer)
+
     }
 
     override func didReceiveMemoryWarning() {

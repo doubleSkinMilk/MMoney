@@ -18,7 +18,7 @@ class TopView: UIView {
         self.backgroundColor = UIColor.blackColor()
     }
     
-    func buideTitleView(titleItems:[String]) -> Void {
+    private func buideTitleView(titleItems:[String]) -> Void {
         
         let redView = UIView.init(frame: CGRect(x: (MainScreenWidth-50)/2, y: 0, width: 50, height: 3))
         redView.backgroundColor = UIColor.redColor()

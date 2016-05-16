@@ -13,17 +13,13 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         self.window = UIWindow.init(frame: UIScreen.mainScreen().bounds)
-        
         let nav = UINavigationController.init(rootViewController: MainPageViewController())
         nav.navigationBarHidden = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
-        
         return true
     }
 
